@@ -1,0 +1,140 @@
+@font-face {
+  font-family: billabong;
+  src: url("billabong-cufonfonts-webfont/Billabong.woff") format("woff");
+}
+
+.container-fluid {
+  width: 95%;
+  height: auto;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+}
+
+.dashboard {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 2fr 1.5fr 2fr 6fr;
+      grid-template-rows: 1fr 2fr 1.5fr 2fr 6fr;
+  background-color: #EDF1F0;
+  border-radius: 12px 0 0 12px;
+  height: 100%;
+  position: fixed;
+  width: 18.5%;
+}
+
+.dashboard__logo {
+  position: relative;
+  text-align: center;
+  top: 10%;
+}
+
+.dashboard-logoText {
+  font-family: billabong;
+  font-size: 180%;
+}
+
+.fa-circle {
+  color: #E1306C;
+}
+
+.dashboard__profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dashboard__imageBorder {
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid #F56040;
+  width: 100px;
+  height: 100px;
+  padding: 8px;
+}
+
+.dashboard__image {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.dashboard__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+}
+
+.dashboard__username {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #B3BBB9;
+}
+
+.dashboard__details {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  font-size: 90%;
+}
+
+.dashboard__details--border {
+  border-right: 1px solid #B3BBB9;
+}
+
+.dashboard__option {
+  text-align: center;
+}
+
+.dashboard__options {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
+}
+
+.dashboard__options:hover {
+  color: #E1306C;
+}
+
+.dashboard__options:active {
+  color: #E1306C;
+}
+
+.dashboard__options--icon {
+  font-size: 140%;
+}
+
+.dashboard__options--text {
+  font-size: 110%;
+}
+
+.dashboard__options--number {
+  color: #B3BBB9;
+}
+
+.content {
+  position: relative;
+  z-index: 0;
+  text-align: center;
+}
+
+.content__top {
+  background-color: #E1306C;
+}
+/*# sourceMappingURL=index.css.map */

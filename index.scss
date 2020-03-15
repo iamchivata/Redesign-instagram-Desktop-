@@ -1,0 +1,154 @@
+$border-color1:#c13584;
+$border-color2:#E1306C;
+$border-color3:#F56040;
+$border-color4:#F77737;
+$text-color1:black;
+$text-color2:#B3BBB9;
+$text-color3:#E1306C;
+$dashboard-color:#EDF1F0;
+$content-color:white;
+
+@font-face{
+    font-family: billabong;
+    src: url("billabong-cufonfonts-webfont/Billabong.woff") format('woff');
+}
+
+
+.container-fluid{
+    position: relative;
+    width: 95%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.dashboard{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1.5fr 2fr 6fr;
+    background-color: $dashboard-color;
+    border-radius: 12px 0 0 12px;
+    height: 100%;
+    position: fixed;
+    width: 18.5%;
+}
+
+.dashboard__logo{
+    position: relative;
+    text-align: center;
+    top: 10%;
+    
+}
+
+.dashboard-logoText{
+    font-family: billabong;
+    font-size: 180%;
+}
+
+.fa-circle{
+color: $border-color2;
+}
+
+.dashboard__profile{
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard__imageBorder{
+    text-align: center;
+    border-radius: 50%;
+    border:2px solid $border-color3;
+    width: 80px;
+    height: 80px;
+    padding: 8px;
+}
+
+.dashboard__image{
+    border-radius: 50%;
+    width:60px; 
+    height:60px;
+}
+
+.dashboard__name{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.dashboard__username{
+    display: flex;
+    justify-content: center;
+    color: $text-color2;
+}
+
+.dashboard__details{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    font-size: 90%;
+}
+
+.dashboard__details--border{
+   
+    border-right: 1px solid $text-color2;
+}
+
+.dashboard__option{
+    text-align: center;
+}
+
+.dashboard__options{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    &:hover{
+     color: $text-color3;
+    }
+    &:active{
+        color: $text-color3;
+    }
+}
+
+.dashboard__options--icon{
+    font-size: 140%;
+}
+
+.dashboard__options--text{
+   font-size: 110%;
+
+}
+
+.dashboard__options--number{
+    color: $text-color2;
+}
+
+.content{
+    width: 100%;
+    text-align: center;
+}
+
+.content__top{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5%;
+    padding-left: 5%;
+    height: 50px;
+    padding-top: 10px;
+}
+
+.content__search{
+    padding-top: 2px;
+    height: 30px;
+    width: 200px;
+    background-color: $dashboard-color;
+    border-radius: 5px;
+    i{
+        padding-right: 5px;
+        font-size: 17px;
+    }
+    
+}
+
+.content__input{
+    background-color: $dashboard-color;
+    border: none;
+}
+
