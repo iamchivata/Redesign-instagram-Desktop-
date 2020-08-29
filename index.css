@@ -5,12 +5,14 @@
 
 .container-fluid {
   position: relative;
-  width: 97%;
-  height: auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 4fr;
       grid-template-columns: 1fr 4fr;
+}
+
+.content {
+  margin-left: 250px;
 }
 
 .dashboard {
@@ -22,7 +24,9 @@
   border-radius: 12px 0 0 12px;
   height: 100%;
   position: fixed;
+  left: 0;
   width: 18.5%;
+  min-width: 250px;
 }
 
 .dashboard__logo {
@@ -62,6 +66,10 @@
   border-radius: 50%;
   width: 75px;
   height: 75px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 
 .dashboard__name {
@@ -128,10 +136,6 @@
   color: #B3BBB9;
 }
 
-.content {
-  width: 100%;
-}
-
 .content__top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -139,8 +143,6 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-right: 5%;
-  padding-left: 5%;
   height: 50px;
   padding-top: 20px;
   padding-bottom: 50px;
@@ -176,10 +178,6 @@
   border: none;
 }
 
-.content__story {
-  padding-left: 5%;
-}
-
 .content__story h3 {
   font-weight: bold;
 }
@@ -187,8 +185,10 @@
 .content__stories {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: (minmax(90px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 10px;
+  justify-items: center;
 }
 
 .content__stories div {
@@ -204,10 +204,8 @@
   border-radius: 50%;
   width: 75px;
   height: 75px;
-}
-
-.content__feed {
-  padding-left: 5%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .content__feed h3 {
@@ -215,19 +213,20 @@
 }
 
 .content__posts {
-  position: relative;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+  -webkit-column-width: auto;
+          column-width: auto;
+  -webkit-column-count: 3;
+          column-count: 3;
   text-align: center;
 }
 
+.content__posts div {
+  display: -ms-inline-grid;
+  display: inline-grid;
+}
+
 .content__post {
-  width: 290px;
-  height: 320px;
+  width: 100%;
   border-radius: 5px;
 }
 
@@ -239,9 +238,15 @@
       grid-template-columns: 3fr 1fr 1fr;
   padding-top: 5px;
   padding-bottom: 20px;
+  width: 100%;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  justify-items: end;
 }
 
 .content__caption div[role="name"] {
   font-weight: bold;
+  margin-right: auto;
 }
 /*# sourceMappingURL=index.css.map */

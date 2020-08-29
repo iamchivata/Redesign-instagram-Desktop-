@@ -16,10 +16,12 @@ $content-color:white;
 
 .container-fluid{
     position: relative;
-    width: 97%;
-    height: auto;
     display: grid;
     grid-template-columns: 1fr 4fr;
+}
+
+.content {
+    margin-left: 250px;
 }
 
 .dashboard{
@@ -29,7 +31,9 @@ $content-color:white;
     border-radius: 12px 0 0 12px;
     height: 100%;
     position: fixed;
+    left: 0;
     width: 18.5%;
+    min-width: 250px;
 }
 
 .dashboard__logo{
@@ -66,6 +70,8 @@ color: $border-color2;
     border-radius: 50%;
     width:75px; 
     height:75px;
+    object-fit: cover;
+    object-position: top;
 }
 
 .dashboard__name{
@@ -120,17 +126,9 @@ color: $border-color2;
     color: $text-color2;
 }
 
-.content{
-    width: 100%;
-  
-    
-}
-
 .content__top{
     display: flex;
     justify-content: space-between;
-    padding-right: 5%;
-    padding-left: 5%;
     height: 50px;
     padding-top: 20px;
     padding-bottom: 50px;
@@ -169,7 +167,6 @@ color: $border-color2;
 }
 
 .content__story{
-    padding-left: 5%;
     h3{
         font-weight: bold;
     }
@@ -177,41 +174,42 @@ color: $border-color2;
 
 .content__stories{
  display: grid;
- grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-
+ grid-template-columns: repeat(auto-fit,minmax(90px,1fr));
+ gap: 10px;
+ justify-items: center;
  div{
     text-align: center;
     border-radius: 50%;
     border:2px solid $border-color3;
     width: 87px;
     height: 87px;
-    padding: 4px;   
+    padding: 4px;
     img{
         border-radius: 50%;
     width: 75px; 
     height:75px;
+    object-fit: cover;
     }
  }
 }
 
 .content__feed{
-    padding-left: 5%;
     h3{
         font-weight: bold;
     }
 }
 
 .content__posts{
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    column-width: auto;
+    column-count: 3;
     text-align: center;
+    div {
+        display: inline-grid;
+    }
 }
 
 .content__post{
-    width: 290px;
-    height: 320px;
+    width: 100%;
     border-radius: 5px;
 }
 
@@ -221,7 +219,11 @@ color: $border-color2;
     grid-template-columns: 3fr 1fr 1fr;
     padding-top: 5px;
     padding-bottom: 20px;
+    width: 100%;
+    min-width: max-content;
+    justify-items: end;
     div[role="name"]{
         font-weight: bold;
+        margin-right: auto;
     }
 }
